@@ -148,7 +148,7 @@ if(!isset($_SESSION['loggedin'])){
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center" >
+  <header id="header" class="header fixed-top d-flex align-items-center">
 
 <div class="d-flex align-items-center justify-content-between">
   <a href="index.html" class="logo d-flex align-items-center">
@@ -171,14 +171,14 @@ if(!isset($_SESSION['loggedin'])){
     <li class="nav-item dropdown pe-3">
 
       <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-  
-        <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo ucfirst(substr($_SESSION["FirstName"],0,1)) .".". $_SESSION['LastName']    ?></span>
+
+        <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo ucfirst(substr($_SESSION["FirstName"], 0, 1)) . "." . $_SESSION['LastName']    ?></span>
       </a><!-- End Profile Iamge Icon -->
 
-      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile" style="background-color: #030f40;">
         <li class="dropdown-header">
-          <h6><?php echo $_SESSION["FirstName"] ." ". $_SESSION['LastName']    ?></h6>
-          <span><?php echo $_SESSION["usertype"]   ?></span>
+          <h6 style="color:white;"><?php echo $_SESSION["FirstName"] . " " . $_SESSION['LastName']    ?></h6>
+          <span style="color:white;"><?php echo $_SESSION["usertype"]   ?></span>
         </li>
         <li>
           <hr class="dropdown-divider">
@@ -186,9 +186,13 @@ if(!isset($_SESSION['loggedin'])){
 
 
 
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="logout.php">
-            <i class="bi bi-box-arrow-right"></i>
+        <li class="d-flex py-1 bg-light">
+          <a class="dropdown-item align-items-center" href="profile.php" style="border:1px solid gray;border-radius:6px;">
+            <i class="bi bi-person text-dark"></i>
+            <span>profile</span>
+          </a>
+          <a class="dropdown-item align-items-center" href="logout.php" style="border:1px solid gray;border-radius:6px;">
+            <i class="bi bi-box-arrow-right text-dark"></i>
             <span>Sign Out</span>
           </a>
         </li>

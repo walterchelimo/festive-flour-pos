@@ -159,46 +159,50 @@ if(!isset($_SESSION['loggedin'])){
 </div><!-- End Logo -->
 
 <nav class="header-nav ms-auto">
-  <ul class="d-flex align-items-center">
+      <ul class="d-flex align-items-center">
 
-    <li class="nav-item d-block d-lg-none">
-      <a class="nav-link nav-icon search-bar-toggle " href="#">
-        <i class="bi bi-search"></i>
-      </a>
-    </li><!-- End Search Icon-->
-
-
-
-    <li class="nav-item dropdown pe-3">
-
-      <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-  
-        <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo ucfirst(substr($_SESSION["FirstName"],0,1)) .".". $_SESSION['LastName']    ?></span>
-      </a><!-- End Profile Iamge Icon -->
-
-      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-        <li class="dropdown-header">
-          <h6><?php echo $_SESSION["FirstName"] ." ". $_SESSION['LastName']    ?></h6>
-          <span><?php echo $_SESSION["usertype"]   ?></span>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-
-
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="logout.php">
-            <i class="bi bi-box-arrow-right"></i>
-            <span>Sign Out</span>
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
           </a>
-        </li>
+        </li><!-- End Search Icon-->
 
-      </ul><!-- End Profile Dropdown Items -->
-    </li><!-- End Profile Nav -->
 
-  </ul>
-</nav><!-- End Icons Navigation -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+
+            <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo ucfirst(substr($_SESSION["FirstName"], 0, 1)) . "." . $_SESSION['LastName']    ?></span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile" style="background-color: #030f40;">
+            <li class="dropdown-header">
+              <h6 style="color:white;"><?php echo $_SESSION["FirstName"] . " " . $_SESSION['LastName']    ?></h6>
+              <span style="color:white;"><?php echo $_SESSION["usertype"]   ?></span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+
+
+            <li class="d-flex py-1 bg-light">
+              <a class="dropdown-item align-items-center" href="profile.php" style="border:1px solid gray;border-radius:6px;">
+                <i class="bi bi-person text-dark"></i>
+                <span>profile</span>
+              </a>
+              <a class="dropdown-item align-items-center" href="logout.php" style="border:1px solid gray;border-radius:6px;">
+                <i class="bi bi-box-arrow-right text-dark"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
 
 </header><!-- End Header -->
 
